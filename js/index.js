@@ -46,7 +46,7 @@ function nextDiv(element) {
   let checkHouseNumber = document.getElementsByName('houseNumber')
   let checkZipCode = document.getElementsByName('zipCode')[0].checkValidity()
 
-  let passwordMatch = checkPassword === checkRepeatPassword
+  let passwordMatch = document.getElementsByName('password')[0].value === document.getElementsByName('password-repeat')[0].value
 
   let fatherDiv = element.parentNode.id;
 
@@ -97,8 +97,8 @@ function nextDiv(element) {
         element.parentNode.style.display = 'none'
 
         document.getElementById('resultDiv').style.display = 'none';
-        document.getElementById('personalDiv').style.display = 'none';
         document.getElementById('resultDiv').style.display = 'block';
+        document.getElementById('personalDiv').style.display = 'none';
         showData()
       } else {
         alert('You have invalid entries')
@@ -120,22 +120,27 @@ function nextDiv(element) {
 // const resultPhoto = document.getElementById('#photoLabel')
 
 
-function showData() {
-  const firstName = document.getElementsByName('firstName')[0].value
-  const lastName = document.getElementsByName('lastName')[0].value
-  const birthDate = document.getElementsByName('birthDate')[0].value
-  const nationality = document.getElementsByName('nationality')[0].value
-  const userName = document.getElementsByName('nationality')[0].value
-  const imageFile = document.getElementsByName('imageFile')[0].value
-  const address = document.getElementsByName('address')[0].value
-  const houseNumber = document.getElementsByName('houseNumber')[0].value
-  const zipCode = document.getElementsByName('zipCode')[0].value
-  const password = document.getElementsByName('password')[0].value
 
-  document.getElementById('#nameLabel').innerHTML = firstName + ' ' + lastName
-  document.getElementById('#birthDateLabel').innerHTML = birthDate
-  document.getElementById('#nationalityLabel').innerHTML = nationality
-  document.getElementById('#addressLabel').innerHTML = address + '' + houseNumber + '' + zipCode
-  document.getElementById('#passwordLabel').innerHTML = password
+function showData() {
+  let firstName = document.getElementsByName('firstName')[0].value
+  let lastName = document.getElementsByName('lastName')[0].value
+  let birthDate = document.getElementsByName('birthDate')[0].value
+  let nationality = document.getElementsByName('nationality')[0].value
+  let userName = document.getElementsByName('nationality')[0].value
+  let imageFile = document.getElementsByName('imageFile')[0].value
+  let address = document.getElementsByName('address')[0].value
+  let houseNumber = document.getElementsByName('houseNumber')[0].value
+  let zipCode = document.getElementsByName('zipCode')[0].value
+  let password = document.getElementsByName('password')[0].value
+
+  document.getElementById('nameLabel').innerHTML = firstName + ' ' + lastName
+  document.getElementById('birthDateLabel').innerHTML = birthDate
+  document.getElementById('nationalityLabel').innerHTML = nationality
+  document.getElementById('addressLabel').innerHTML = address + '' + houseNumber + '' + zipCode
+  document.getElementById('passwordLabel').innerHTML = password
+  document.getElementById('username').innerHTML = userName
+  document.getElementById('photLabel').src =
+    imageFile
+
 
 }
