@@ -47,7 +47,9 @@ function nextDiv(element) {
   let checkRepeatPassword = document.getElementsByName('password-repeat')[0].checkValidity()
   let checkImageFile = document.getElementsByName('imageFile')[0].checkValidity()
 
-  let fatherDiv = element.parentNode.id;
+  let
+
+    let fatherDiv = element.parentNode.id;
 
   //     SWITCH STATE FOR SECOND PAGE
 
@@ -89,6 +91,19 @@ function nextDiv(element) {
       } else {
         alert('You have invalid entries')
       }
+      break;
+
+    default:
+      break;
+  }
+
+  //     FINAL CASE PAGE
+
+  switch (fatherDiv) {
+    case 'resultDiv':
+
+
+
       break;
 
     default:
