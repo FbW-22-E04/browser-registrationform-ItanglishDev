@@ -47,6 +47,17 @@ function nextDiv(element) {
   let checkRepeatPassword = document.getElementsByName('password-repeat')[0].checkValidity()
   let checkImageFile = document.getElementsByName('imageFile')[0].checkValidity()
 
+  let checkAddress = document.getElementsByName('address')[0].checkValidity()
+  let checkHouseNumber = document.getElementsByName('houseNumber')
+  let checkZipCode = document.getElementsByName('zipCode')[0].checkValidity()
+
+  let passwordMatch = checkPassword === checkRepeatPassword
+
+
+  const firstName = document.getElementsByName('firstName')
+  const lastName = document.getElementsByName('lastName')
+  const birthDate = document.getElementsByName('birthDate')
+  const nationality = document.getElementsByName('nationality')
   // let
 
   let fatherDiv = element.parentNode.id;
@@ -63,7 +74,7 @@ function nextDiv(element) {
         element.parentNode.style.display = 'none'
         document.getElementById('resultDiv').style.display = 'none';
         document.getElementById('profileDiv').style.display = 'block';
-        document.getElementById('resultDiv').style.display = 'none';
+        document.getElementById('addressDiv').style.display = 'none';
 
       } else {
         alert('You have invalid entries')
@@ -71,12 +82,22 @@ function nextDiv(element) {
 
       break;
 
+    case 'addressDiv':
+      if (checkAddress &&
+        checkHouseNumber &&
+        checkZipCode &&
+        passwordMatch) {
+        element.parentNode.style.display = 'none'
+        document.getElementById('resultDiv').style.display = 'none';
+        document.getElementById('profileDiv').style.display = 'none';
+        document.getElementById('addressDiv').style.display = 'block';
+      } else {
+        alert('You have invalid entries')
+      }
+
+      break;
     default:
       break;
-  }
-
-  //      SWITCH STATE FOR THIRD PAGE
-  switch (fatherDiv) {
     case 'profileDiv':
 
       if (checkUserName &&
@@ -85,6 +106,7 @@ function nextDiv(element) {
         checkImageFile) {
 
         element.parentNode.style.display = 'none'
+
         document.getElementById('resultDiv').style.display = 'none';
         document.getElementById('profileDiv').style.display = 'none';
         document.getElementById('resultDiv').style.display = 'block';
@@ -93,9 +115,28 @@ function nextDiv(element) {
       }
       break;
 
+
     default:
       break;
   }
+
+  //   SWITCH FOR ADDRESS 
+
+  switch (key) {
+    case value:
+
+      break;
+
+    default:
+      break;
+  }
+
+  //      SWITCH STATE FOR THIRD PAGE
+  // switch (fatherDiv) {
+
+  //   default:
+  //     break;
+  // }
 
   //     FINAL CASE PAGE
 
