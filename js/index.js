@@ -37,5 +37,8 @@ function nextDiv(element) {
   // let fatherDiv= element.parentNode.id
 
   let checkFirstName = document.getElementsByName('firstName')[0].checkValidity()
-  alert(checkFirstName)
+  // alert(checkFirstName)
+  let checkLastName = document.getElementsByName('lastName')[0].checkValidity()
+  let checkBirthDate = document.getElementsByName('birthDate')[0].checkValidity()
+  let checkNationality = document.getElementsByName('nationality')[0].checkValidity()
 }
