@@ -27,11 +27,6 @@ function previous(element) {
   }
 }
 
-// const next = document.querySelector
-
-// function checkValidity() {
-
-// }
 function nextDiv(element) {
   // alert('clicked')
   // let fatherDiv= element.parentNode.id
@@ -53,13 +48,6 @@ function nextDiv(element) {
 
   let passwordMatch = checkPassword === checkRepeatPassword
 
-
-  const firstName = document.getElementsByName('firstName')
-  const lastName = document.getElementsByName('lastName')
-  const birthDate = document.getElementsByName('birthDate')
-  const nationality = document.getElementsByName('nationality')
-  // let
-
   let fatherDiv = element.parentNode.id;
 
   //     SWITCH STATE FOR SECOND PAGE
@@ -72,9 +60,10 @@ function nextDiv(element) {
         checkBirthDate &&
         checkNationality) {
         element.parentNode.style.display = 'none'
-        document.getElementById('resultDiv').style.display = 'none';
-        document.getElementById('profileDiv').style.display = 'none';
+
         document.getElementById('addressDiv').style.display = 'block';
+        document.getElementById('profileDiv').style.display = 'none';
+        document.getElementById('resultDiv').style.display = 'none';
 
       } else {
         alert('You have invalid entries')
@@ -88,16 +77,16 @@ function nextDiv(element) {
         checkZipCode &&
         passwordMatch) {
         element.parentNode.style.display = 'none'
-        document.getElementById('resultDiv').style.display = 'none';
-        document.getElementById('profileDiv').style.display = 'block';
         document.getElementById('personalDiv').style.display = 'none';
+        document.getElementById('profileDiv').style.display = 'block';
+        document.getElementById('resultDiv').style.display = 'none';
       } else {
         alert('You have invalid entries')
       }
 
       break;
-    default:
-      break;
+    // default:
+    //   break;
     case 'profileDiv':
 
       if (checkUserName &&
@@ -110,6 +99,7 @@ function nextDiv(element) {
         document.getElementById('resultDiv').style.display = 'none';
         document.getElementById('profileDiv').style.display = 'none';
         document.getElementById('resultDiv').style.display = 'block';
+        showData()
       } else {
         alert('You have invalid entries')
       }
@@ -118,12 +108,34 @@ function nextDiv(element) {
 
     default:
       break;
-  }
 
-  const resultName = document.getElementById('#name')
-  const resultBirthDate = document.getElementById('#birthDateLabel')
-  const resultNationality = document.getElementById('#nationalityLabel')
-  const resultAddress = document.getElementById('#addressLabel')
-  const resultUserName = document.getElementById('#usernameLabel')
-  const resultPassword = document.getElementById('#passwordLabel')
-  const resultPhoto = document.getElementById('#photoLabel')
+  }
+}
+// const resultName = document.getElementById('#name')
+// const resultBirthDate = document.getElementById('#birthDateLabel')
+// const resultNationality = document.getElementById('#nationalityLabel')
+// const resultAddress = document.getElementById('#addressLabel')
+// const resultUserName = document.getElementById('#usernameLabel')
+// const resultPassword = document.getElementById('#passwordLabel')
+// const resultPhoto = document.getElementById('#photoLabel')
+
+const firstName = document.getElementsByName('firstName')
+const lastName = document.getElementsByName('lastName')
+const birthDate = document.getElementsByName('birthDate')
+const nationality = document.getElementsByName('nationality')
+const userName = document.getElementsByName('nationality')
+const imageFile = document.getElementsByName('imageFile')
+const address = document.getElementsByName('address')
+const houseNumber = document.getElementsByName('houseNumber')
+const zipCode = document.getElementsByName('zipCode')
+const password = document.getElementsByName('password')
+
+function showData() {
+  document.getElementById('#nameLabel').innerHTML = firstName + ' ' + lastName
+  document.getElementById('#birthDateLabel').innerHTML = birthDate
+  document.getElementById('#nationalityLabel').innerHTML = nationality
+  document.getElementById('#addressLabel').innerHTML = address + '' + houseNumber + '' + zipCode
+  document.getElementById('#passwordLabel').innerHTML = password
+
+
+}
