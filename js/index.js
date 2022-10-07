@@ -47,9 +47,9 @@ function nextDiv(element) {
   let checkRepeatPassword = document.getElementsByName('password-repeat')[0].checkValidity()
   let checkImageFile = document.getElementsByName('imageFile')[0].checkValidity()
 
-  let
+  // let
 
-    let fatherDiv = element.parentNode.id;
+  let fatherDiv = element.parentNode.id;
 
   //     SWITCH STATE FOR SECOND PAGE
 
@@ -103,10 +103,17 @@ function nextDiv(element) {
     case 'resultDiv':
 
 
-
       break;
 
     default:
       break;
   }
 }
+
+const resultName = document.getElementById('#name')
+const resultBirthDate = document.getElementById('#birthDateLabel')
+const resultNationality = document.getElementById('#nationalityLabel')
+const resultAddress = document.getElementById('#addressLabel')
+const resultUserName = document.getElementById('#usernameLabel')
+const resultPassword = document.getElementById('#passwordLabel')
+const resultPhoto = document.getElementById('#photoLabel')
