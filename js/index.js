@@ -72,7 +72,7 @@ function nextDiv(element) {
         checkBirthDate &&
         checkNationality) {
         element.parentNode.style.display = 'none'
-        document.getElementById('personalDiv').style.display = 'none';
+        document.getElementById('resultDiv').style.display = 'none';
         document.getElementById('profileDiv').style.display = 'none';
         document.getElementById('addressDiv').style.display = 'block';
 
@@ -90,7 +90,7 @@ function nextDiv(element) {
         element.parentNode.style.display = 'none'
         document.getElementById('resultDiv').style.display = 'none';
         document.getElementById('profileDiv').style.display = 'block';
-        document.getElementById('addressDiv').style.display = 'none';
+        document.getElementById('personalDiv').style.display = 'none';
       } else {
         alert('You have invalid entries')
       }
@@ -119,37 +119,6 @@ function nextDiv(element) {
     default:
       break;
   }
-
-  //   SWITCH FOR ADDRESS 
-
-  // switch (key) {
-  //   case value:
-
-  //     break;
-
-  //   default:
-  //     break;
-  // }
-
-  //      SWITCH STATE FOR THIRD PAGE
-  // switch (fatherDiv) {
-
-  //   default:
-  //     break;
-  // }
-
-  //     FINAL CASE PAGE
-
-  //   switch (fatherDiv) {
-  //     case 'resultDiv':
-
-
-  //       break;
-
-  //     default:
-  //       break;
-  //   }
-  // }
 
   const resultName = document.getElementById('#name')
   const resultBirthDate = document.getElementById('#birthDateLabel')
