@@ -41,4 +41,28 @@ function nextDiv(element) {
   let checkLastName = document.getElementsByName('lastName')[0].checkValidity()
   let checkBirthDate = document.getElementsByName('birthDate')[0].checkValidity()
   let checkNationality = document.getElementsByName('nationality')[0].checkValidity()
+
+  let fatherDiv = element.parentNode.id;
+
+  switch (fatherDiv) {
+    case 'personalDiv':
+
+      if (checkFirstName &&
+        checkLastName &&
+        checkBirthDate &&
+        checkNationality) {
+        element.parentNode.style.display = 'none'
+        document.getElementById('resultDiv').style.display = 'none';
+        document.getElementById('profileDiv').style.display = 'block';
+        document.getElementById('resultDiv').style.display = 'none';
+
+      } else {
+        alert('You have invalid entries')
+      }
+
+      break;
+
+    default:
+      break;
+  }
 }
