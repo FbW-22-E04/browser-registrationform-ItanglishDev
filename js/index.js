@@ -26,3 +26,16 @@ function previous(element) {
       break;
   }
 }
+
+// const next = document.querySelector
+
+// function checkValidity() {
+
+// }
+function nextDiv(element) {
+  // alert('clicked')
+  // let fatherDiv= element.parentNode.id
+
+  let checkFirstName = document.getElementsByName('firstName')[0].checkValidity()
+  alert(checkFirstName)
+}
