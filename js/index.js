@@ -97,7 +97,7 @@ function nextDiv(element) {
         element.parentNode.style.display = 'none'
 
         document.getElementById('resultDiv').style.display = 'none';
-        document.getElementById('profileDiv').style.display = 'none';
+        document.getElementById('personalDiv').style.display = 'none';
         document.getElementById('resultDiv').style.display = 'block';
         showData()
       } else {
@@ -119,18 +119,19 @@ function nextDiv(element) {
 // const resultPassword = document.getElementById('#passwordLabel')
 // const resultPhoto = document.getElementById('#photoLabel')
 
-const firstName = document.getElementsByName('firstName')[0].value
-const lastName = document.getElementsByName('lastName')[0].value
-const birthDate = document.getElementsByName('birthDate')[0].value
-const nationality = document.getElementsByName('nationality')[0].value
-const userName = document.getElementsByName('nationality')[0].value
-const imageFile = document.getElementsByName('imageFile')[0].value
-const address = document.getElementsByName('address')[0].value
-const houseNumber = document.getElementsByName('houseNumber')[0].value
-const zipCode = document.getElementsByName('zipCode')[0].value
-const password = document.getElementsByName('password')[0].value
 
 function showData() {
+  const firstName = document.getElementsByName('firstName')[0].value
+  const lastName = document.getElementsByName('lastName')[0].value
+  const birthDate = document.getElementsByName('birthDate')[0].value
+  const nationality = document.getElementsByName('nationality')[0].value
+  const userName = document.getElementsByName('nationality')[0].value
+  const imageFile = document.getElementsByName('imageFile')[0].value
+  const address = document.getElementsByName('address')[0].value
+  const houseNumber = document.getElementsByName('houseNumber')[0].value
+  const zipCode = document.getElementsByName('zipCode')[0].value
+  const password = document.getElementsByName('password')[0].value
+
   document.getElementById('#nameLabel').innerHTML = firstName + ' ' + lastName
   document.getElementById('#birthDateLabel').innerHTML = birthDate
   document.getElementById('#nationalityLabel').innerHTML = nationality
