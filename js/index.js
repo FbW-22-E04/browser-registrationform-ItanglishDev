@@ -72,9 +72,9 @@ function nextDiv(element) {
         checkBirthDate &&
         checkNationality) {
         element.parentNode.style.display = 'none'
-        document.getElementById('resultDiv').style.display = 'none';
-        document.getElementById('profileDiv').style.display = 'block';
-        document.getElementById('addressDiv').style.display = 'none';
+        document.getElementById('personalDiv').style.display = 'none';
+        document.getElementById('profileDiv').style.display = 'none';
+        document.getElementById('addressDiv').style.display = 'block';
 
       } else {
         alert('You have invalid entries')
@@ -89,8 +89,8 @@ function nextDiv(element) {
         passwordMatch) {
         element.parentNode.style.display = 'none'
         document.getElementById('resultDiv').style.display = 'none';
-        document.getElementById('profileDiv').style.display = 'none';
-        document.getElementById('addressDiv').style.display = 'block';
+        document.getElementById('profileDiv').style.display = 'block';
+        document.getElementById('addressDiv').style.display = 'none';
       } else {
         alert('You have invalid entries')
       }
@@ -122,14 +122,14 @@ function nextDiv(element) {
 
   //   SWITCH FOR ADDRESS 
 
-  switch (key) {
-    case value:
+  // switch (key) {
+  //   case value:
 
-      break;
+  //     break;
 
-    default:
-      break;
-  }
+  //   default:
+  //     break;
+  // }
 
   //      SWITCH STATE FOR THIRD PAGE
   // switch (fatherDiv) {
@@ -140,21 +140,21 @@ function nextDiv(element) {
 
   //     FINAL CASE PAGE
 
-  switch (fatherDiv) {
-    case 'resultDiv':
+  //   switch (fatherDiv) {
+  //     case 'resultDiv':
 
 
-      break;
+  //       break;
 
-    default:
-      break;
-  }
-}
+  //     default:
+  //       break;
+  //   }
+  // }
 
-const resultName = document.getElementById('#name')
-const resultBirthDate = document.getElementById('#birthDateLabel')
-const resultNationality = document.getElementById('#nationalityLabel')
-const resultAddress = document.getElementById('#addressLabel')
-const resultUserName = document.getElementById('#usernameLabel')
-const resultPassword = document.getElementById('#passwordLabel')
-const resultPhoto = document.getElementById('#photoLabel')
+  const resultName = document.getElementById('#name')
+  const resultBirthDate = document.getElementById('#birthDateLabel')
+  const resultNationality = document.getElementById('#nationalityLabel')
+  const resultAddress = document.getElementById('#addressLabel')
+  const resultUserName = document.getElementById('#usernameLabel')
+  const resultPassword = document.getElementById('#passwordLabel')
+  const resultPhoto = document.getElementById('#photoLabel')
