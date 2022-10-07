@@ -119,16 +119,16 @@ function nextDiv(element) {
 // const resultPassword = document.getElementById('#passwordLabel')
 // const resultPhoto = document.getElementById('#photoLabel')
 
-const firstName = document.getElementsByName('firstName')
-const lastName = document.getElementsByName('lastName')
-const birthDate = document.getElementsByName('birthDate')
-const nationality = document.getElementsByName('nationality')
-const userName = document.getElementsByName('nationality')
-const imageFile = document.getElementsByName('imageFile')
-const address = document.getElementsByName('address')
-const houseNumber = document.getElementsByName('houseNumber')
-const zipCode = document.getElementsByName('zipCode')
-const password = document.getElementsByName('password')
+const firstName = document.getElementsByName('firstName')[0].value
+const lastName = document.getElementsByName('lastName')[0].value
+const birthDate = document.getElementsByName('birthDate')[0].value
+const nationality = document.getElementsByName('nationality')[0].value
+const userName = document.getElementsByName('nationality')[0].value
+const imageFile = document.getElementsByName('imageFile')[0].value
+const address = document.getElementsByName('address')[0].value
+const houseNumber = document.getElementsByName('houseNumber')[0].value
+const zipCode = document.getElementsByName('zipCode')[0].value
+const password = document.getElementsByName('password')[0].value
 
 function showData() {
   document.getElementById('#nameLabel').innerHTML = firstName + ' ' + lastName
@@ -136,6 +136,5 @@ function showData() {
   document.getElementById('#nationalityLabel').innerHTML = nationality
   document.getElementById('#addressLabel').innerHTML = address + '' + houseNumber + '' + zipCode
   document.getElementById('#passwordLabel').innerHTML = password
-
 
 }
